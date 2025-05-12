@@ -57,7 +57,6 @@ public class GodCommand implements CommandExecutor {
         if (plugin.godModePlayers.contains(targetUUID)) {
             plugin.godModePlayers.remove(targetUUID);
             target.setInvulnerable(false); // Reset invulnerability
-            // Also reset any custom god mode flags if you implemented them beyond setInvulnerable
             if (informant.equals(target)) {
                 plugin.sendMessage(target, "god_disabled_self");
             } else {
@@ -66,7 +65,7 @@ public class GodCommand implements CommandExecutor {
             }
         } else {
             plugin.godModePlayers.add(targetUUID);
-            target.setInvulnerable(true); // Bukkit's built-in invulnerability
+            target.setInvulnerable(true); 
             target.setFoodLevel(20); // Max hunger
             target.setSaturation(20); // Max saturation
             if (informant.equals(target)) {
