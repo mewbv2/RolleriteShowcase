@@ -1,0 +1,101 @@
+name: rollerite
+version: 1.0.0
+main: io.mewb.rolleriteShowcase.RolleriteShowcase
+api-version: '1.21' # Adjust to the latest API version you are developing against
+author: MEWB | Discord - amberltd | NOT FOR PROFIT
+description: Essential commands for players and staff.
+
+commands:
+  gamemode:
+    description: Sets a player's gamemode.
+    usage: "/gamemode <type> [player]"
+    aliases: [gm]
+    permission: rollerite.gamemode
+  god:
+    description: Toggles god mode for a player.
+    usage: "/god [player]"
+    permission: rollerite.god
+  openinv:
+    description: Opens a player's inventory.
+    usage: "/openinv <player>"
+    aliases: [oi, invsee]
+    permission: rollerite.openinv
+  enderchest:
+    description: Opens a player's ender chest.
+    usage: "/enderchest [player]"
+    aliases: [ec, echest]
+    permission: rollerite.enderchest
+  fix:
+    description: Repairs the item in your hand.
+    usage: "/fix"
+    aliases: [repair]
+    permission: rollerite.fix
+  tpa:
+    description: Sends a teleport request to a player.
+    usage: "/tpa <player>"
+    permission: rollerite.tpa
+  tpaccept:
+    description: Accepts a teleport request.
+    usage: "/tpaccept [player]"
+    permission: rollerite.tpa.accept
+  tpdeny:
+    description: Denies a teleport request.
+    usage: "/tpdeny [player]"
+    permission: rollerite.tpa.deny
+  trash:
+    description: Opens a temporary disposal inventory.
+    usage: "/trash"
+    permission: rollerite.trash
+
+permissions:
+  rollerite.*:
+    description: Gives access to all rollerite commands.
+    children:
+      rollerite.gamemode: true
+      rollerite.gamemode.others: true
+      rollerite.god: true
+      rollerite.god.others: true
+      rollerite.openinv: true
+      rollerite.enderchest: true
+      rollerite.enderchest.others: true
+      rollerite.fix: true
+      rollerite.tpa: true
+      rollerite.tpa.accept: true
+      rollerite.tpa.deny: true
+      rollerite.trash: true
+  rollerite.gamemode:
+    description: Allows setting your own gamemode.
+    default: op
+  rollerite.gamemode.others:
+    description: Allows setting other players' gamemodes.
+    default: op
+  rollerite.god:
+    description: Allows toggling your own god mode.
+    default: op
+  rollerite.god.others:
+    description: Allows toggling other players' god mode.
+    default: op
+  rollerite.openinv:
+    description: Allows opening other players' inventories.
+    default: op
+  rollerite.enderchest:
+    description: Allows opening your own ender chest.
+    default: op
+  rollerite.enderchest.others:
+    description: Allows opening other players' ender chests.
+    default: op
+  rollerite.fix:
+    description: Allows repairing items.
+    default: op
+  rollerite.tpa:
+    description: Allows sending teleport requests.
+    default: true # Or 'op' depending on your server philosophy
+  rollerite.tpa.accept:
+    description: Allows accepting teleport requests.
+    default: true
+  rollerite.tpa.deny:
+    description: Allows denying teleport requests.
+    default: true
+  rollerite.trash:
+    description: Allows opening the trash GUI.
+    default: op

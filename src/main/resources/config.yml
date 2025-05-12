@@ -1,0 +1,57 @@
+prefix: "&7[&bRollerite Showcase&7] &r"
+
+# /gamemode
+gamemode_set_self: "%prefix%Your gamemode has been set to &e%gamemode%&r."
+gamemode_set_other: "%prefix%&e%player%&r's gamemode has been set to &e%gamemode%&r."
+gamemode_invalid_type: "%prefix%&cInvalid gamemode type. Use: survival, creative, adventure, spectator (or 0,1,2,3)."
+gamemode_usage: "%prefix%&cUsage: /gamemode <type> [player]"
+
+# /god
+god_enabled_self: "%prefix%God mode &aenabled&r."
+god_disabled_self: "%prefix%God mode &cdisabled&r."
+god_enabled_other: "%prefix%God mode &aenabled&r for &e%player%&r."
+god_disabled_other: "%prefix%God mode &cdisabled&r for &e%player%&r."
+god_usage: "%prefix%&cUsage: /god [player]"
+
+# /openinv
+openinv_opening: "%prefix%Opening &e%player%&r's inventory..."
+openinv_usage: "%prefix%&cUsage: /openinv <player>"
+
+# /enderchest
+enderchest_opening_self: "%prefix%Opening your ender chest..."
+enderchest_opening_other: "%prefix%Opening &e%player%&r's ender chest..."
+enderchest_usage: "%prefix%&cUsage: /enderchest [player]"
+
+# /fix
+fix_success: "%prefix%Item in hand repaired."
+fix_no_item: "%prefix%&cYou must be holding an item to repair."
+fix_not_repairable: "%prefix%&cThis item cannot be repaired."
+fix_usage: "%prefix%&cUsage: /fix"
+
+# /tpa
+tpa_request_sent: "%prefix%Teleport request sent to &e%target%&r. They have &6%timeout% seconds&r to accept."
+tpa_request_received: "%prefix%&e%sender%&r has requested to teleport to you. Type &a/tpaccept %sender%&r or &c/tpdeny %sender%&r."
+tpa_no_pending_request: "%prefix%&cNo pending teleport request from &e%player%&r."
+tpa_request_accepted_sender: "%prefix%&e%target%&r accepted your teleport request."
+tpa_request_accepted_target: "%prefix%Teleport request from &e%sender%&r accepted."
+tpa_request_denied_sender: "%prefix%&e%target%&r denied your teleport request."
+tpa_request_denied_target: "%prefix%Teleport request from &e%sender%&r denied."
+tpa_teleporting: "%prefix%Teleporting..."
+tpa_player_offline: "%prefix%&cPlayer &e%player%&r is not online."
+tpa_cannot_teleport_to_self: "%prefix%&cYou cannot send a teleport request to yourself."
+tpa_request_expired_sender: "%prefix%Your teleport request to &e%target%&r has expired."
+tpa_request_expired_target: "%prefix%The teleport request from &e%sender%&r has expired."
+tpa_usage: "%prefix%&cUsage: /tpa <player>"
+tpaccept_usage: "%prefix%&cUsage: /tpaccept [player]" # Player is optional if only one request is pending
+tpdeny_usage: "%prefix%&cUsage: /tpdeny [player]"
+
+# /trash
+trash_title: "&4Trash - Items will be deleted!"
+trash_opened: "%prefix%Trash opened. Items will be deleted upon closing."
+trash_usage: "%prefix%&cUsage: /trash"
+
+# General
+no_permission: "%prefix%&cYou do not have permission to use this command."
+player_not_found: "%prefix%&cPlayer not found: &e%player%&r."
+console_cannot_use_self: "%prefix%&cThe console must specify a player for this command."
+must_be_player: "%prefix%&cOnly players can execute this command."
