@@ -1,10 +1,9 @@
-package io.mewb.rolleriteShowcase;
+package io.mewb.Showcase;
 
-import io.mewb.rolleriteShowcase.commands.*;
-import io.mewb.rolleriteShowcase.listeners.FoodLevelChangeListener;
-import io.mewb.rolleriteShowcase.listeners.InventoryCloseListener;
-import io.mewb.rolleriteShowcase.listeners.PlayerDamageListener;
-import org.bukkit.Bukkit;
+import io.mewb.Showcase.commands.*;
+import io.mewb.Showcase.listeners.FoodLevelChangeListener;
+import io.mewb.Showcase.listeners.InventoryCloseListener;
+import io.mewb.Showcase.listeners.PlayerDamageListener;
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -17,9 +16,9 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.UUID;
 
-public class RolleriteShowcase extends JavaPlugin {
+public class Showcase extends JavaPlugin {
 
-    private static RolleriteShowcase instance;
+    private static Showcase instance;
     public final HashSet<UUID> godModePlayers = new HashSet<>();
     public final HashMap<UUID, TeleportRequest> teleportRequests = new HashMap<>();
 
@@ -60,7 +59,7 @@ public class RolleriteShowcase extends JavaPlugin {
         teleportRequests.clear();
     }
 
-    public static RolleriteShowcase getInstance() {
+    public static Showcase getInstance() {
         return instance;
     }
 
