@@ -1,4 +1,4 @@
-package io.mewb.rolleriteShowcase.commands;
+package io.mewb.Showcase.commands;
 
 
 import java.util.UUID;

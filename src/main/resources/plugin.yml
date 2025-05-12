@@ -1,6 +1,6 @@
-name: rollerite
+name: Showcase
 version: 1.0.0
-main: io.mewb.rolleriteShowcase.RolleriteShowcase
+main: io.mewb.Showcase.Showcase
 api-version: '1.21' # Adjust to the latest API version you are developing against
 author: MEWB | Discord - amberltd | NOT FOR PROFIT
 description: Essential commands for players and staff.
@@ -89,7 +89,7 @@ permissions:
     default: op
   rollerite.tpa:
     description: Allows sending teleport requests.
-    default: true # Or 'op' depending on your server philosophy
+    default: true
   rollerite.tpa.accept:
     description: Allows accepting teleport requests.
     default: true

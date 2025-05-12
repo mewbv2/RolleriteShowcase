@@ -1,7 +1,7 @@
-package io.mewb.rolleriteShowcase.commands;
+package io.mewb.Showcase.commands;
 
 
-import io.mewb.rolleriteShowcase.RolleriteShowcase;
+import io.mewb.Showcase.Showcase;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -14,10 +14,10 @@ import org.jetbrains.annotations.NotNull;
 
 public class TrashCommand implements CommandExecutor {
 
-    private final RolleriteShowcase plugin;
+    private final Showcase plugin;
     public static final String TRASH_INVENTORY_TITLE_KEY = "trash_title";
 
-    public TrashCommand(RolleriteShowcase plugin) {
+    public TrashCommand(Showcase plugin) {
         this.plugin = plugin;
     }
 

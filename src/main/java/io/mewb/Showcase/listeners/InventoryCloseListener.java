@@ -1,17 +1,17 @@
-package io.mewb.rolleriteShowcase.listeners;
+package io.mewb.Showcase.listeners;
 
 
-import io.mewb.rolleriteShowcase.RolleriteShowcase;
-import io.mewb.rolleriteShowcase.commands.TrashCommand;
+import io.mewb.Showcase.Showcase;
+import io.mewb.Showcase.commands.TrashCommand;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryCloseEvent;
 import org.bukkit.inventory.InventoryView;
 
 public class InventoryCloseListener implements Listener {
-    private final RolleriteShowcase plugin;
+    private final Showcase plugin;
 
-    public InventoryCloseListener(RolleriteShowcase plugin) {
+    public InventoryCloseListener(Showcase plugin) {
         this.plugin = plugin;
     }
 

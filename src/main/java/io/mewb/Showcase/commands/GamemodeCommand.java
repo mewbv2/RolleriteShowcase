@@ -1,7 +1,7 @@
-package io.mewb.rolleriteShowcase.commands;
+package io.mewb.Showcase.commands;
 
 
-import io.mewb.rolleriteShowcase.RolleriteShowcase;
+import io.mewb.Showcase.Showcase;
 import org.bukkit.Bukkit;
 import org.bukkit.GameMode;
 import org.bukkit.command.Command;
@@ -11,9 +11,9 @@ import org.bukkit.entity.Player;
 
 public class GamemodeCommand implements CommandExecutor {
 
-    private final RolleriteShowcase plugin;
+    private final Showcase plugin;
 
-    public GamemodeCommand(RolleriteShowcase plugin) {
+    public GamemodeCommand(Showcase plugin) {
         this.plugin = plugin;
     }
 

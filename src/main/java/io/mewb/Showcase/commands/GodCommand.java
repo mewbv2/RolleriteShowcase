@@ -1,7 +1,7 @@
-package io.mewb.rolleriteShowcase.commands;
+package io.mewb.Showcase.commands;
 
 
-import io.mewb.rolleriteShowcase.RolleriteShowcase;
+import io.mewb.Showcase.Showcase;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -13,9 +13,9 @@ import java.util.UUID;
 
 public class GodCommand implements CommandExecutor {
 
-    private final RolleriteShowcase plugin;
+    private final Showcase plugin;
 
-    public GodCommand(RolleriteShowcase plugin) {
+    public GodCommand(Showcase plugin) {
         this.plugin = plugin;
     }
 

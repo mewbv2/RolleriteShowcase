@@ -1,7 +1,7 @@
-package io.mewb.rolleriteShowcase.commands;
+package io.mewb.Showcase.commands;
 
 
-import io.mewb.rolleriteShowcase.RolleriteShowcase;
+import io.mewb.Showcase.Showcase;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -14,9 +14,9 @@ import org.jetbrains.annotations.NotNull;
 
 public class TpaCommands implements CommandExecutor {
 
-    private final RolleriteShowcase plugin;
+    private final Showcase plugin;
 
-    public TpaCommands(RolleriteShowcase plugin) {
+    public TpaCommands(Showcase plugin) {
         this.plugin = plugin;
     }
 

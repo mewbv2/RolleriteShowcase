@@ -1,7 +1,7 @@
-package io.mewb.rolleriteShowcase.listeners;
+package io.mewb.Showcase.listeners;
 
 
-import io.mewb.rolleriteShowcase.RolleriteShowcase;
+import io.mewb.Showcase.Showcase;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -12,9 +12,9 @@ import org.bukkit.event.entity.EntityDamageEvent;
  */
 
 public class PlayerDamageListener implements Listener {
-    private final RolleriteShowcase plugin;
+    private final Showcase plugin;
 
-    public PlayerDamageListener(RolleriteShowcase plugin) {
+    public PlayerDamageListener(Showcase plugin) {
         this.plugin = plugin;
     }
 
