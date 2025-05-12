@@ -20,7 +20,6 @@ import java.util.UUID;
 public class RolleriteShowcase extends JavaPlugin {
 
     private static RolleriteShowcase instance;
-    private FileConfiguration config; // Keep this if you still need direct config access elsewhere
     public final HashSet<UUID> godModePlayers = new HashSet<>();
     public final HashMap<UUID, TeleportRequest> teleportRequests = new HashMap<>();
 
@@ -28,12 +27,10 @@ public class RolleriteShowcase extends JavaPlugin {
     public void onEnable() {
         instance = this;
 
-        // Load configuration
         saveDefaultConfig();
-        // It's good practice to reload the config in onEnable to ensure it's fresh
-        // and to assign it to the class variable if other methods might need raw access.
-        reloadConfig(); // Bukkit's method to load or reload the config from disk
-        config = getConfig(); // Assign the loaded config to your class variable
+        reloadConfig();
+        // Keep this if you still need direct config access elsewhere
+        FileConfiguration config = getConfig();
 
         // Register commands
         getCommand("gamemode").setExecutor(new GamemodeCommand(this));
@@ -67,22 +64,20 @@ public class RolleriteShowcase extends JavaPlugin {
         return instance;
     }
 
-    // --- CORRECTED getMessage METHOD ---
     public String getMessage(String path, String... replacements) {
-        // Get the raw message string from the configuration
+
         String message = getConfig().getString(path, "&cMessage not found in config: " + path);
 
-        // Get the prefix from the configuration
+
         String prefix = getConfig().getString("prefix", "&7[&bEssentials&c+&7] &r"); // Default if prefix is missing
 
-        // First, replace %prefix% placeholder with the actual prefix
+
         message = message.replace("%prefix%", prefix);
 
-        // Then, process any additional dynamic replacements passed to the method
+
         if (replacements != null) {
             for (int i = 0; i < replacements.length; i += 2) {
                 if (i + 1 < replacements.length) {
-                    // Ensure placeholder and replacement are not null to avoid NPE
                     String placeholder = replacements[i];
                     String value = replacements[i + 1];
                     if (placeholder != null && value != null) {
@@ -91,10 +86,9 @@ public class RolleriteShowcase extends JavaPlugin {
                 }
             }
         }
-        // Finally, translate color codes
+
         return ChatColor.translateAlternateColorCodes('&', message);
     }
-    // --- END OF CORRECTED getMessage METHOD ---
 
     public void sendMessage(CommandSender sender, String path, String... replacements) {
         sender.sendMessage(getMessage(path, replacements));
